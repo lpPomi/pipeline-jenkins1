@@ -14,7 +14,8 @@ node{
 
    stage('Build') {
             steps {
-                sh 'mvn -B package'
+                sh 'mvn -v'
+           //     sh 'mvn -B package'
             }
         }
 
