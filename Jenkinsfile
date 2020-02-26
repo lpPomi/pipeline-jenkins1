@@ -1,18 +1,6 @@
-pipeline {
+
 node{
-
-   agent any
-   
-
-    stage ('Initialize') {
-            steps {
-                sh '''
-                    echo "PATH = ${PATH}"
-                    echo "M2_HOME = ${M2_HOME}"
-                ''' 
-            }
-        }
-
+ 
    stage('SCM Checkout'){
      git 'https://github.com/lpPomi/pipeline-jenkins1'
    }
@@ -23,5 +11,4 @@ node{
       sh "/opt/maven/bin/mvn package"
    }
 
-}
 }
