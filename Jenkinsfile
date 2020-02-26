@@ -13,9 +13,13 @@ node{
   // }
 
    stage('Build') {
-            steps {
-                sh 'mvn -v'
-           //     sh 'mvn -B package'
+             echo 'in Stage Build...  Scripted Pipeline'
+             echo 'Maven version'
+             sh 'mvn -v'
+             echo 'Clean maven'
+             sh 'mvn clean'
+             echo 'Package maven'
+             sh 'mvn -B package'
             }
         }
 
