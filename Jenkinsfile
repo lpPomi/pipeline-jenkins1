@@ -1,10 +1,8 @@
+pipeline {
 node{
 
    agent any
-    tools { 
-        maven 'Maven 3.6.3' 
-        jdk 'jdk8' 
-    }
+   
 
     stage ('Initialize') {
             steps {
@@ -25,4 +23,5 @@ node{
       sh "/opt/maven/bin/mvn package"
    }
 
+}
 }
