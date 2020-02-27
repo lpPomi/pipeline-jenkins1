@@ -4,14 +4,16 @@ node{
      git 'https://github.com/lpPomi/pipeline-jenkins1'
    }
   
-  // stage('Compile-Package'){
+   stage('Compile-Package'){
       // Get maven home path
-      def mvnHome =  tool name: '', type: 'maven' 
+     def mvnHome =  tool name: '', type: 'maven' 
+       //def mvn_version = 'M3'
+       //tool name: '', type: 'maven'
        echo 'Maven Home'
        echo '${mvnHome}/bin'
       // sh "${mvnHome}/bin/mvn package"
   //    sh "/opt/maven/bin/mvn package"
-  // }
+   }
 
    stage('Build') {
       echo 'in Stage Build...  Scripted Pipeline'
